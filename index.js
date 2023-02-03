@@ -14,7 +14,7 @@ const jwt = require("jsonwebtoken");
 app.use(express.json());
 app.use(
   cors({
-    origin: "*",
+    origin: "https://guvi-hachkathon2-frontend.vercel.app",
   })
 );
 
