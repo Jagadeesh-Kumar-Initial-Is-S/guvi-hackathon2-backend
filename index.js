@@ -272,13 +272,13 @@ app.post(
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "jk2743@srmist.edu.in",
+          user: process.env.USER,
           pass:  process.env.PASS,
         },
       });
 console.log(request.params.movie , request.params.selected , request.params.totalprice)
       var mailOptions = {
-        from: "jk2743@srmist.edu.in",
+        from: process.env.USER,
         to: mailid,
         subject: "BookMyShow",
         text: `Your Ticket`,
